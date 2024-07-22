@@ -19,11 +19,11 @@ const FullPageLoader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
           clearInterval(interval);
           setFadeOut(true);
           setTimeout(() => {
-            setLoading(false);
             onLoadComplete();
-          }, 9000); // Fade-out duration
+            setLoading(false);
+          }, 2000); // Fade-out duration
         }
-      }, 50); // Speed of loading animation
+      }, 10); // Speed of loading animation
     };
 
     simulateLoading();

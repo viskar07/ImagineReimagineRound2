@@ -18,9 +18,8 @@ const RevelSection = () => {
   return (
     <section className="w-full h-screen relative overflow-hidden my-20" ref={containerRef}>
       <div className="w-full h-full flex flex-col justify-center items-center gap-5 z-10">
-        <p className="text-yellow  opacity-85 font-poppins tracking-[10px]">WANT TO KNOW</p>
-        <h1 className="text-yellow text-xl md:text-7xl font-bold font-poppins">SOMETHING</h1>
-        <h1 className="text-yellow text-xl md:text-7xl font-bold font-poppins">TOP SECRET?</h1>
+        <h1 className="hover-stroke text-xl md:text-7xl  font-gasoek">Fashion Finds</h1>
+        <h1 className="text-yellow text-xl md:text-7xl   font-gasoek"> Sale of the Season!</h1>
         <CoolMode  options={{particle:'/images/smile.png'}}>
           <button className="z-40 p-4 mt-10 rounded-full text-2xl font-gasoek bg-yellow opacity-90 black-stroke  animate-bounce ">UPTO 50% OFF</button>
         </CoolMode>
