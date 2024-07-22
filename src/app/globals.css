@@ -24,10 +24,62 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    overflow-x: hidden;
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    body {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+  
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke-width: 1px; /* Stroke width */
+    -webkit-text-stroke-color: white; /* Stroke color */
+  }
+  .text-stroke-2 {
+    color: transparent;
+    -webkit-text-stroke-width: 2px; /* Stroke width */
+    -webkit-text-stroke-color: white; /* Stroke color */
+  }
+  .hover-stroke {
+    color: black;
+    -webkit-text-stroke-width: 1px; /* Stroke width */
+    -webkit-text-stroke-color: #fffb00; /* Stroke color */
+  }
+  .hover-stroke2 {
+    color: transparent;
+    -webkit-text-stroke-width: 1px; /* Stroke width */
+    -webkit-text-stroke-color: #fffb00; /* Stroke color */
+  }
+  .black-stroke {
+    color: transparent;
+    -webkit-text-stroke-width: 2px; /* Stroke width */
+    -webkit-text-stroke-color: black; /* Stroke color */
+  }
+
+  .blend {
+    mix-blend-mode: difference;
+  }
+
+  .blur {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 }

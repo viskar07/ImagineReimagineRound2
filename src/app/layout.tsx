@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { IBM_Plex_Sans_Condensed, Gasoek_One } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const ibmPlexSansCondensed = IBM_Plex_Sans_Condensed({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable:'--ibm-plex-sans-condensed'
+});
+
+const gasoek = Gasoek_One({
+  weight: '400',
+  subsets: ['latin'],
+  variable:'--gasoek-one'
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${ibmPlexSansCondensed.className} ${gasoek.variable} } `}>{children}</body>
     </html>
   );
 }
